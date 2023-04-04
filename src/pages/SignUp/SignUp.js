@@ -49,7 +49,8 @@ function SignUp(){
                     <label htmlFor="intermediate">Intermediate</label>
                 <input type="radio" name="category" id="expert"></input>
                     <label htmlFor="expert">Expert</label>
-
+                <p>Avatar</p><button>Upload</button><br />
+                <button>Sign Up</button>
             </form>
         </>
     )

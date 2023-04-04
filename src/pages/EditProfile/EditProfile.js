@@ -7,26 +7,22 @@ function EditProfile(){
             <form>
                 <label>
                     Name: <input type="text" name="name"></input>
-                </label>
+                </label><br />
                 <label>
                     Email: <input type="text" name="email"></input>
-                </label>
+                </label><br />
                 <label>
                     Password: <input type="text" name="password"></input>
-                </label>
-                <label>
-                    Fitness Level: <input type="radio" name="difficulty">Beginner</input>
-                                   <input type="radio" name="difficulty">Intermediate</input>
-                                   <input type="radio" name="difficulty">Expert</input>
-                </label>
-                <label>
-                    Food Preference: <input type="radio" name="category">I love meat</input>
-                                     <input type="radio" name="category">Vegetarian</input>
-                </label>
-                <label>
-                    Avatar: <button>Upload</button>
-                </label>
-                <button>Sign Up</button>
+                </label><br />
+                <p>Fitness Level:</p>
+                <input type="radio" name="category" id="beginner"></input>
+                    <label htmlFor="beginner">Beginner</label>
+                <input type="radio" name="category" id="intermediate"></input>
+                    <label htmlFor="intermediate">Intermediate</label>
+                <input type="radio" name="category" id="expert"></input>
+                    <label htmlFor="expert">Expert</label>
+                <p>Avatar</p><button>Upload</button><br />
+                <button>Save</button>
             </form>
         </>
     )
