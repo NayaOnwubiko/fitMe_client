@@ -60,6 +60,7 @@ function UserProfile() {
         <>
             <h1>User Profile</h1>
             <p>Welcome to the site: {user.name} </p>
+            <h3>Schedule:</h3>
             <button onClick={handleLogout}>Logout</button>
         </>
     )
