@@ -24,7 +24,7 @@ function SignUp(){
         })
         .catch(error => {
             //Show an error message
-            alert("Unable to register, please try again");
+            alert("Unable to Sign Up, please try again");
         })
     }
 

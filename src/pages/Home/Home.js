@@ -50,6 +50,7 @@ function Home() {
                 <label>Email: <input type="text" name="email"></input></label><br />
                 <label>Password: <input type="password" name="password"></input></label><br />
                 <button>Login</button>
+                <Link to="/signup">Sign Up</Link>
             </form>
         </>
     )
