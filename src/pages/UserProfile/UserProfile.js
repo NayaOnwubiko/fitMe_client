@@ -1,6 +1,6 @@
 import "./UserProfile.scss";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 /*
@@ -60,7 +60,7 @@ function UserProfile() {
         <>
             <h1>User Profile</h1>
             <p>Welcome to the site: {user.name} </p>
-            <h3>Schedule:</h3>
+            <Link to="/schedule">Schedule</Link>
             <button onClick={handleLogout}>Logout</button>
         </>
     )
