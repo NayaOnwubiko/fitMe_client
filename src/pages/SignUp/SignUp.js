@@ -16,11 +16,13 @@ function SignUp(){
         axios.post("http://localhost:8080/signup", {
             name: event.target.name.value,
             email: event.target.email.value,
-            password: event.target.password.value
+            password: event.target.password.value,
+            difficulty: event.target.difficulty.value,
+            vegetarian: event.target.vegetarian.value
         })
         .then(response => {
             localStorage.authToken = response.data.token;
-            navigate("/user-profile");
+            navigate("/");
         })
         .catch(error => {
             //Show an error message
@@ -40,15 +42,38 @@ function SignUp(){
                     Email: <input type="text" name="email"></input>
                 </label><br />
                 <label>
-                    Password: <input type="text" name="password"></input>
+                    Password: <input type="password" name="password"></input>
                 </label><br />
                 <p>Fitness Level:</p>
-                <input type="radio" name="category" id="beginner"></input>
+                <input type="radio" 
+                        name="difficulty" 
+                        id="beginner">
+                </input>
                     <label htmlFor="beginner">Beginner</label>
-                <input type="radio" name="category" id="intermediate"></input>
+                <input type="radio" 
+                        name="difficulty" 
+                        id="intermediate">
+                </input>
                     <label htmlFor="intermediate">Intermediate</label>
-                <input type="radio" name="category" id="expert"></input>
+                <input type="radio" 
+                       name="difficulty" 
+                       id="expert"></input>
                     <label htmlFor="expert">Expert</label>
+                <p>Food Preference: </p>
+                <input type="radio" 
+                        name="vegetarian" 
+                        value="FALSE"
+                        id="non_veg"
+                        >
+                </input>
+                    <label htmlFor="non_veg">I Love Meat</label>
+                <input type="radio" 
+                        name="vegetarian" 
+                        value="TRUE"
+                        id="veg"
+                        >
+                </input>
+                    <label htmlFor="veg">Vegetarian</label>
                 <p>Avatar</p><button>Upload</button><br />
                 <button>Sign Up</button>
             </form>

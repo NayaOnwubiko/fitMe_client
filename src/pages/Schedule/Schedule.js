@@ -43,7 +43,7 @@ function Schedule(){
         <>
         <h2>Your Schedule</h2>
         <ul>
-            {schedules.map(schedule =>(
+            {schedule.map(schedule =>(
                 <li>{schedule.meal}</li>
             ))}
         </ul>

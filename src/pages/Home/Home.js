@@ -20,7 +20,7 @@ function Home() {
        })
        .then(response => {
             localStorage.authToken = response.data.token;
-            navigate("/user-profile");
+            navigate("/");
        })
        .catch(error => {
             alert("Unable to login, sorry");
