@@ -1,0 +1,98 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.home {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+
+    &__hero {
+        display: inline-flex;
+        flex-direction: row;
+
+        &-title {
+            position: absolute;
+            z-index: 1;
+            width: 16.9rem;
+            height: 17rem;
+            left: 4.3rem;
+            top: 16.4rem;
+            
+            font-weight: 700;
+            font-size: 3.25rem;
+            line-height: 130%;
+        }
+
+        &-image {
+            position: absolute;
+            width: 41.5rem;
+            height: 41.5rem;
+            left: 10rem;
+            top: 4.1rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        width: 22rem;
+        height: 10rem;
+        left: 4.6rem;
+        top: 41rem;
+
+        &-label {
+            color: $black;
+            width: 100%;
+            height: 1.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-top: 1rem;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-input {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            border: none;
+            border-bottom: 0.025rem solid $graphite;
+            width: 100%;
+            
+        }
+
+        &-link {
+            width: 10rem;
+            height: 1.5rem;
+            font-weight: 700;
+            color: $yellow;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+
+        &-button {
+            width: 100%;
+            height: 3.75rem;
+            color: $white;
+            font-weight: 600;
+            background: $yellow;
+            mix-blend-mode: normal;
+            box-shadow: 0px 2.28964px 19.8435px rgba(0, 0, 0, 0.16);
+            border-radius: 1.5rem;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            border-color: $yellow;
+            &:hover {
+                background-color: $darkyellow;
+                }
+        }
+    }
+}
