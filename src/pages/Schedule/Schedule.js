@@ -3,6 +3,7 @@ import "./Schedule.scss";
 // import { useState, useEffect } from "react";
 // import axios from "axios";
 import MealList from "../../components/MealList/MealList";
+import Header from "../../components/Header/Header";
 
 
 function Schedule(){
@@ -41,7 +42,10 @@ function Schedule(){
     // }
 
     return (
+        <>
+        <Header />
         <MealList />
+        </>
     )
 }
 

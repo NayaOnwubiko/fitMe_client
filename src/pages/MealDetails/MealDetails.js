@@ -1,7 +1,9 @@
 import "./MealDetails.scss";
+import Header from "../../components/Header/Header";
 import { useParams, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 
 function MealDetails(){
     const { mealId } = useParams();
@@ -26,6 +28,8 @@ function MealDetails(){
     };
 
     return (
+        <>
+        <Header />
         <section>
             <NavLink to="/schedule">
                 Back to schedule
@@ -35,6 +39,7 @@ function MealDetails(){
                 <p>Ingredients: {renderedMeal.ingredients}</p>
                 <p>Preparation: {renderedMeal.preparation}</p>
         </section>
+        </>
     );
 }
 

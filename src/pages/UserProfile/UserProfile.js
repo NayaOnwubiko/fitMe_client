@@ -23,7 +23,7 @@ function UserProfile() {
             navigate("/");
             return ;
         }
-
+        console.log(jwtToken);
         //if JWT token exists
         axios
             .get("http://localhost:8080/users/currentuser", {
