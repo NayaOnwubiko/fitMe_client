@@ -26,7 +26,7 @@ function UserProfile() {
 
         //if JWT token exists
         axios
-            .get("http://localhost:8080/user-profile", {
+            .get("http://localhost:8080/users/currentuser", {
                 headers: {
                     Authorization: `Bearer ${jwtToken}`
                 }

@@ -13,7 +13,7 @@ function SignUp(){
         event.preventDefault();
         
         //post signup details once the form is set up
-        axios.post("http://localhost:8080/signup", {
+        axios.post("http://localhost:8080/users/signup", {
             name: event.target.name.value,
             email: event.target.email.value,
             password: event.target.password.value,
@@ -47,17 +47,21 @@ function SignUp(){
                 <p>Fitness Level:</p>
                 <input type="radio" 
                         name="difficulty" 
-                        id="beginner">
+                        id="beginner"
+                        value="beginner">
                 </input>
                     <label htmlFor="beginner">Beginner</label>
                 <input type="radio" 
                         name="difficulty" 
-                        id="intermediate">
+                        id="intermediate"
+                        value="intermediate">
+                        
                 </input>
                     <label htmlFor="intermediate">Intermediate</label>
                 <input type="radio" 
                        name="difficulty" 
-                       id="expert"></input>
+                       id="expert"
+                       value="expert"></input>
                     <label htmlFor="expert">Expert</label>
                 <p>Food Preference: </p>
                 <input type="radio" 

@@ -5,6 +5,7 @@ import SignUp from './pages/SignUp/SignUp';
 import UserProfile from './pages/UserProfile/UserProfile';
 import EditProfile from './pages/EditProfile/EditProfile';
 import Schedule from './pages/Schedule/Schedule';
+import MealDetails from "./pages/MealDetails/MealDetails";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/users/currentuser" element={<UserProfile />} />
+          <Route path="/schedule/meals/:mealId" element={<MealDetails />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/edit-profile" element={<EditProfile />} />
         </Routes>

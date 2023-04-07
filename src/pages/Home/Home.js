@@ -2,6 +2,7 @@ import "./Home.scss";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
 function Home() {
     const navigate = useNavigate();
 
@@ -14,7 +15,7 @@ function Home() {
             3. Handle axios response: token -> set on localStorage.authToken
             4. Show user profile
         */
-       axios.post("http://localhost:8080/login", {
+       axios.post("http://localhost:8080/users/login", {
         email: event.target.email.value,
         password: event.target.password.value
        })
@@ -36,7 +37,7 @@ function Home() {
                 <h1>Home</h1>
                     <ul>
                         <li><Link to="/schedule">Schedule</Link></li>
-                        <li><Link to="/user-profile">Profile</Link></li>
+                        <li><Link to="/users/currentuser">Profile</Link></li>
                     </ul>
             </>
         );
