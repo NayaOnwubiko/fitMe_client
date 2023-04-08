@@ -1,12 +1,13 @@
 import "./SignUp.scss";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import signup from "../../assets/icons/signup.svg";
 
 function SignUp(){
     const navigate = useNavigate();
 
     if (localStorage.authToken) {
-        navigate("/user-profile");
+        navigate("/currentuser");
     }
 
     const handleSignUp = (event) => {
@@ -32,56 +33,73 @@ function SignUp(){
 
     //Show the signup form
     return (
-        <>
-            <h1>Sign Up Below</h1>
-            <form onSubmit={handleSignUp}>
-                <label>
-                    Name: <input type="text" name="name"></input>
+            <section className="signup">
+                <div className="signup__hero">
+                    <img className="signup__hero-image"
+                         src={signup}
+                        alt="sign up" />
+                    <h2>HOW DOES THIS WORK?</h2>
+                        <h3>FILL IN THE FORM</h3>
+                            <p>Based on your fitness level & meal preferences, we will select the optimal training & nutrition program for you.</p>
+                </div>
+            <form className="signup__form" onSubmit={handleSignUp}>
+                <label className="signup__form-label">
+                    Name <input className="signup__form-input" type="text" name="name"></input>
                 </label><br />
-                <label>
-                    Email: <input type="text" name="email"></input>
+                <label className="signup__form-label">
+                    Email <input className="signup__form-input" type="text" name="email"></input>
                 </label><br />
-                <label>
-                    Password: <input type="password" name="password"></input>
+                <label className="signup__form-label">
+                    Password <input className="signup__form-input" type="password" name="password"></input>
                 </label><br />
-                <p>Fitness Level:</p>
-                <input type="radio" 
+                <p className="signup__form-radio">Fitness Level</p>
+                <div className="signup__form-option">
+                <input 
+                        type="radio" 
                         name="difficulty" 
                         id="beginner"
                         value="beginner">
                 </input>
-                    <label htmlFor="beginner">Beginner</label>
+                    <label htmlFor="beginner" className="signup__form-radio-label">Beginner</label>
+                </div>
+                <div className="signup__form-option">
                 <input type="radio" 
                         name="difficulty" 
                         id="intermediate"
-                        value="intermediate">
-                        
+                        value="intermediate">         
                 </input>
-                    <label htmlFor="intermediate">Intermediate</label>
+                    <label htmlFor="intermediate" className="signup__form-radio-label">Intermediate</label>
+                </div>
+                <div className="signup__form-option">
                 <input type="radio" 
                        name="difficulty" 
                        id="expert"
                        value="expert"></input>
-                    <label htmlFor="expert">Expert</label>
-                <p>Food Preference: </p>
+                    <label htmlFor="expert" className="signup__form-radio-label">Expert</label>
+                </div>
+                <p className="signup__form-radio">Food Preference</p>
+                <div className="signup__form-option">
                 <input type="radio" 
                         name="vegetarian" 
                         value="FALSE"
                         id="non_veg"
                         >
                 </input>
-                    <label htmlFor="non_veg">I Love Meat</label>
+                    <label htmlFor="non_veg" className="signup__form-radio-label">I Love Meat</label>
+                </div>
+                <div className="signup__form-option">
                 <input type="radio" 
                         name="vegetarian" 
                         value="TRUE"
                         id="veg"
                         >
                 </input>
-                    <label htmlFor="veg">Vegetarian</label>
+                    <label htmlFor="veg" className="signup__form-radio-label">Vegetarian</label>
+                </div>
                 <p>Avatar</p><button>Upload</button><br />
-                <button>Sign Up</button>
+                <button className="signup__form-button">SIGN UP</button>
             </form>
-        </>
+        </section>
     )
 }
 
