@@ -9,19 +9,13 @@ function Home() {
     const handleLogin = (event) => {
         event.preventDefault();
 
-        /*
-            1. form values: event.target.email.value, event.target.password.value
-            2. axios request: POST /login with email, password to get token
-            3. Handle axios response: token -> set on localStorage.authToken
-            4. Show user profile
-        */
        axios.post("http://localhost:8080/users/login", {
         email: event.target.email.value,
         password: event.target.password.value
        })
        .then(response => {
             localStorage.authToken = response.data.token;
-            navigate("/");
+            navigate("/users/currentuser");
        })
        .catch(error => {
             alert("Unable to login, sorry");

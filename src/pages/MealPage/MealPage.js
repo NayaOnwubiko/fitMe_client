@@ -1,9 +1,7 @@
-import "./Schedule.scss";
 import MealList from "../../components/MealList/MealList";
 import Header from "../../components/Header/Header";
 
-
-function Schedule(){
+function MealPage(){
     return (
         <>
         <Header />
@@ -12,4 +10,4 @@ function Schedule(){
     )
 }
 
-export default Schedule;
+export default MealPage;

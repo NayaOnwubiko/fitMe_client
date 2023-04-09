@@ -2,15 +2,9 @@ import "./UserProfile.scss";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
-/*
-    if token doesn't exist: send user to the homepage
-    if token exists: use it to get data from the backend.
-        -when getting data: if token is invalid, send them to the home page
-        -if token works: set the response on state
-
-    - using user-profile state: render user information
-*/
+import avatar from "../../assets/icons/avatar.svg";
+import exerciseIcon from "../../assets/icons/treadmill.svg";
+import foodIcon from "../../assets/icons/fruit.svg";
 
 function UserProfile() {
     const [user, setUser ] = useState(null);
@@ -57,13 +51,42 @@ function UserProfile() {
     }
 
     return (
-    //Display the User Profile and Schedule Lineup here
-        <>
-            <h1>User Profile</h1>
+    //Display the User Profile and Schedule
+        <section className="profile">
+            <div className="profile__header">
+                <div className="profile__header-image">
+                    <img src={avatar}
+                         alt="avatar"
+                    />
+                </div>
+                <div className="profile__header-name">
+                    <h2 className="profile__header_name-title">{user.name}</h2>
+                    <p className="profile__header-program">Program: {user.difficulty}</p>
+                </div>
+            </div>
+            <div className="schedule">
+                <div className="exercise">
+                    <h3>Exercise Routines</h3>
+                    <img
+                        src={exerciseIcon}
+                        alt="exercise icon"
+                    />
+                </div>
+                <div>
+                    <h3>Meal Plan</h3>
+                    <Link to="/users/meals">
+                    <img
+                        src={foodIcon}
+                        alt="food icon"
+                    />
+                    </Link>
+                </div>
+            </div>
+            {/* <h1>User Profile</h1>
             <p>Welcome to the site: {user.name} </p>
-            <Link to="/schedule">Schedule</Link>
-            <button onClick={handleLogout}>Logout</button>
-        </>
+            <Link to="/users/meals">Meal Schedule</Link>
+            <button onClick={handleLogout}>Logout</button> */}
+        </section>
     )
 }
 export default UserProfile;

@@ -23,7 +23,7 @@ function SignUp(){
         })
         .then(response => {
             localStorage.authToken = response.data.token;
-            navigate("/");
+            navigate("/users/currentuser");
         })
         .catch(error => {
             //Show an error message
