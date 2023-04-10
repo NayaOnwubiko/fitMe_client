@@ -36,18 +36,24 @@ function MealDetails(){
                 Back to Meal Schedule
             </NavLink>
             <h1>{renderedMeal.name}</h1>
-            <div>
+                <img className="detail__image"
+                    src={renderedMeal.image}
+                    alt={renderedMeal.name}
+                    />
+            <div className="detail__caption">
                 <p>Calories: {renderedMeal.calories}</p>
                 <p>{renderedMeal.type}</p>
             </div>
-            <div>
-                <img
+            <div className="detail__description">
+                <img className="detail__description-icon"
                     src={ingredientsIcon}   
                     alt="ingredients icon"
                     />         
                 <h3>Ingredients: </h3> <br/> 
                     <p>{renderedMeal.ingredients}</p>
-                    <img
+            </div>
+            <div className="detail__description">
+                    <img className="detail__description-icon"
                         src={preparationIcon}
                         alt="preparation icon"
                         />

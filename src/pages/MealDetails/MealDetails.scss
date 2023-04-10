@@ -11,4 +11,33 @@
     padding-right: 2rem;
     padding-top: 1rem;
     padding-bottom: 6rem;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__image {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    &__caption {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        border-bottom: 0.025rem solid $cloud;
+        }
+
+    &__description {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 1rem;
+        padding-bottom: 2rem;
+        border-bottom: 0.025rem solid $cloud;
+
+        &-icon {
+            width: 10%;
+            height: 10%;
+        }
+    }
 }

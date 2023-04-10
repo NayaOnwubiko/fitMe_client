@@ -6,6 +6,13 @@
     flex-direction: column;
     font-family: $font;
     text-decoration: none;
+    justify-content: space-evenly;
+    width: 100%;
+
+        &__link {
+            text-decoration: none;
+            color: $darkyellow;
+        }
 
         &__title {
             font-weight: 500;
@@ -18,5 +25,21 @@
             font-weight: 300;
             font-size: 0.85rem;
             color: $graphite;
+        }
+}
+
+.item__image {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-right: 2rem;
+    
+        &-photo {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            object-fit: cover;
         }
 }

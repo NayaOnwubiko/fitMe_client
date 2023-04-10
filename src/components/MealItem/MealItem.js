@@ -7,10 +7,13 @@ function MealItem({ mealItem }) {
     return (
         <>
             <div className="item__image">
-                
+                <img className="item__image-photo"
+                    src={mealItem.image}
+                    alt={mealItem.name}
+                    />
             </div>
             <div className="preview">
-                <Link to={`/schedule/meals/${mealItem.id}`}>
+                <Link className="preview__link" to={`/schedule/meals/${mealItem.id}`}>
                     <h4 className="preview__title">{mealItem.name}</h4>
                 </Link>
                     <p className="preview__content">{mealItem.type}</p>

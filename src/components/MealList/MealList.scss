@@ -8,13 +8,15 @@
     text-decoration: none;
     list-style: none;
     padding: 1rem;
+    
 
     &-item {
-        margin: 1rem;
         border-bottom: 0.025rem solid $cloud;
         padding: 1rem;
         text-decoration: none;
         list-style: none;
+        display: inline-flex;
+        width: 100%;
 
         &:hover {
             cursor: pointer;
