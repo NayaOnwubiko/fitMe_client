@@ -22,10 +22,10 @@ function MealList() {
     }
 
     return (
-        <section>
+        <section className="schedule__container">
             {mealList.map((mealItem) => {
                 return (
-                    <li key={mealItem.id}>
+                    <li className="schedule__container-item" key={mealItem.id}>
                         <MealItem mealItem={mealItem} />
                     </li>
                 );

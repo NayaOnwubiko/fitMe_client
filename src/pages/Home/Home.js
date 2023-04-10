@@ -25,16 +25,7 @@ function Home() {
     const authToken = localStorage.authToken;
 
     if (authToken) {
-        //navigate to the user profile as an option
-        return (
-            <>
-                <h1>Home</h1>
-                    <ul>
-                        <li><Link to="/schedule">Schedule</Link></li>
-                        <li><Link to="/users/currentuser">Profile</Link></li>
-                    </ul>
-            </>
-        );
+        navigate("/users/currentuser");
     }
 
     //Show the user the login form

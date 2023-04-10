@@ -1,0 +1,22 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.preview {
+    display: inline-flex;
+    flex-direction: column;
+    font-family: $font;
+    text-decoration: none;
+
+        &__title {
+            font-weight: 500;
+            font-size: 1.25rem;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        &__content {
+            font-weight: 300;
+            font-size: 0.85rem;
+            color: $graphite;
+        }
+}

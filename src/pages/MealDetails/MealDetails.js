@@ -3,7 +3,8 @@ import Header from "../../components/Header/Header";
 import { useParams, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import ingredientsIcon from "../../assets/icons/ingredients.svg";
+import preparationIcon from "../../assets/icons/preparation.svg";
 
 function MealDetails(){
     const { mealId } = useParams();
@@ -30,14 +31,29 @@ function MealDetails(){
     return (
         <>
         <Header />
-        <section>
-            <NavLink to="/schedule">
-                Back to schedule
+        <section className="detail">
+            <NavLink to="/users/meals">
+                Back to Meal Schedule
             </NavLink>
             <h1>{renderedMeal.name}</h1>
+            <div>
                 <p>Calories: {renderedMeal.calories}</p>
-                <p>Ingredients: {renderedMeal.ingredients}</p>
-                <p>Preparation: {renderedMeal.preparation}</p>
+                <p>{renderedMeal.type}</p>
+            </div>
+            <div>
+                <img
+                    src={ingredientsIcon}   
+                    alt="ingredients icon"
+                    />         
+                <h3>Ingredients: </h3> <br/> 
+                    <p>{renderedMeal.ingredients}</p>
+                    <img
+                        src={preparationIcon}
+                        alt="preparation icon"
+                        />
+                <h3>Preparation: </h3> <br/> 
+                    <p>{renderedMeal.preparation}</p>
+            </div>
         </section>
         </>
     );

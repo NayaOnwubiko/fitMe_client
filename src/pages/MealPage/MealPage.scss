@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.schedule__page-header{
+    background-color: $white;
+    margin: 1rem;
+    display: inline-flex;
+    flex-direction: row;
+    width: 33%;
+    justify-content: space-evenly;
+    border-bottom: 0.025rem solid $cloud;
+
+        &-icon {
+            display: inline-flex;
+            width: 15%;
+
+            &>img{
+                width: 5%;
+            }
+        }
+
+        &-title{
+            font-weight: 500;
+        }
+}
+

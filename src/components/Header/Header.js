@@ -23,8 +23,8 @@ function Header() {
           </NavLink>
         </div>
         <div className="header__nav">
-          <NavLink className={navLinkClassName} to="/schedule">
-            <h3 className="header__nav__option">Schedule</h3>
+          <NavLink className={navLinkClassName} to="/users/meals">
+            <h3 className="header__nav__option">Meal Schedule</h3>
           </NavLink>
           <NavLink className={navLinkClassName} to="/edit-profile">
             <h3 className="header__nav__option">Edit Profile</h3>

@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.schedule__container {
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    margin: 1rem;
+    text-decoration: none;
+    list-style: none;
+    padding: 1rem;
+
+    &-item {
+        margin: 1rem;
+        border-bottom: 0.025rem solid $cloud;
+        padding: 1rem;
+        text-decoration: none;
+        list-style: none;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $lightyellow;
+            }
+    }
+
+}
