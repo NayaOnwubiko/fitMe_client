@@ -12,15 +12,17 @@
 
         &-icon {
             display: inline-flex;
-            width: 12.5%;
-            padding: 1rem;
+            width: 20%;
+            padding: 0.5rem;
 
         }
 
         &-title{
-            font-weight: 600;
-            font-size: 2rem;
-            padding: 1rem
+            font-weight: 500;
+            font-size: 2.5rem;
+            padding: 0.5rem;
+            color: $darkyellow;
+            margin-top: 0.85rem;
         }
 }
 

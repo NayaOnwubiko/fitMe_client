@@ -96,7 +96,6 @@ function SignUp(){
                 </input>
                     <label htmlFor="veg" className="signup__form-radio-label">Vegetarian</label>
                 </div>
-                <p>Avatar</p><button>Upload</button><br />
                 <button className="signup__form-button">SIGN UP</button>
             </form>
         </section>

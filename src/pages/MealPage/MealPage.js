@@ -1,7 +1,7 @@
 import "./MealPage.scss";
 import MealList from "../../components/MealList/MealList";
 import Header from "../../components/Header/Header";
-import fruitIcon from "../../assets/icons/fruit_sm.svg";
+import fruitIcon from "../../assets/icons/bowl.svg";
 
 function MealPage(){
     return (

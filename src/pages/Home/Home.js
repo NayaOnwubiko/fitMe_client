@@ -1,7 +1,8 @@
 import "./Home.scss";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import hero from "../../assets/logo/hero.svg";
+import hero from "../../assets/logo/hero.png";
+
 
 function Home() {
     const navigate = useNavigate();
@@ -30,14 +31,14 @@ function Home() {
 
     //Show the user the login form
     return (
-        <>
             <section className="home">
                 <div className="home__hero">
-                    <h1 className="home__hero-title">HEALTHY AND BEAUTIFUL BODY</h1>
-                    <img className="home__hero-image" 
+                    <img className="home__hero-image"
                         src={hero}
-                        alt="hero" />
+                        alt="hero"
+                        />
                 </div>
+                <div className="home__form-container">
                 <form className="home__form" onSubmit={handleLogin}>
                     <label className="home__form-label">Email
                         <input className="home__form-input" type="text" name="email"></input></label>
@@ -45,10 +46,9 @@ function Home() {
                         <input className="home__form-input" type="password" name="password"></input></label>
                     <Link to="/signup" className="home__form-link">Create an account</Link>
                     <button className="home__form-button">SIGN IN</button>
-                    
                 </form>
+                </div>
             </section>
-        </>
     )
 
 }

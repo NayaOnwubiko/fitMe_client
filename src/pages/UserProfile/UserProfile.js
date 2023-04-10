@@ -4,7 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import avatar from "../../assets/icons/avatar.svg";
 import exerciseIcon from "../../assets/icons/treadmill.svg";
-import foodIcon from "../../assets/icons/fruit.svg";
+import foodIcon from "../../assets/icons/bowl.svg";
+import settingsIcon from "../../assets/icons/settings.svg";
+import powerIcon from "../../assets/icons/power.svg";
 
 function UserProfile() {
     const [user, setUser ] = useState(null);
@@ -17,7 +19,6 @@ function UserProfile() {
             navigate("/");
             return ;
         }
-        console.log(jwtToken);
         //if JWT token exists
         axios
             .get("http://localhost:8080/users/currentuser", {
@@ -54,27 +55,44 @@ function UserProfile() {
         <section className="profile">
             <div className="profile__header">
                 <div className="profile__header-image">
-                    <img src={avatar}
+                    <img className="profile__header-image-icon"
+                        src={avatar}
                          alt="avatar"
                     />
                 </div>
                 <div className="profile__header-name">
+
                     <h2 className="profile__header_name-title">{user.name}</h2>
                     <p className="profile__header-program">Program: {user.difficulty}</p>
+                </div>
+                <div className="profile__header-edit">
+                    <Link className="profile__header-link" to="/edit-profile">
+                        <img className="profile__header-link-icon"
+                        src={settingsIcon}
+                        alt="settings icon"
+                        />
+                    </Link>
+                    <p className="profile__header-text">Edit Profile</p>
+                     <img onClick={handleLogout}
+                        className="profile__header-icon"
+                        src={powerIcon}
+                        alt="power icon"
+                        />
+                    <p className="profile__header-text">Log Out</p>
                 </div>
             </div>
             <div className="schedule">
                 <div className="exercise">
-                    <h3>Exercise Routines</h3>
-                    <img
+                    <h3 className="exercise__title">Exercise Routines</h3>
+                    <img className="exercise__icon"
                         src={exerciseIcon}
                         alt="exercise icon"
                     />
                 </div>
-                <div>
-                    <h3>Meal Plan</h3>
-                    <Link to="/users/meals">
-                    <img
+                <div className="exercise">
+                    <h3 className="exercise__title">Meal Plan</h3>
+                    <Link className="exercise__link" to="/users/meals">
+                    <img className="exercise__icon"
                         src={foodIcon}
                         alt="food icon"
                     />
