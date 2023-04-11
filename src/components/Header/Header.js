@@ -1,36 +1,29 @@
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
+import yogaIcon from "../../assets/icons/yoga.svg";
+import profileIcon from "../../assets/icons/profile.svg";
+
 
 function Header() {
-  const navLinkClassName = ({ isActive }) => {
-    if (isActive) {
-      return "header__nav__option--active";
-    } else {
-      return "header__nav__option";
-    }
-  };
 
   return (
     <header className="header">
-      <div className="header__tablet-view">
-        <div className="header__logo-container">
-          <NavLink to="/">
-            <img
-              className="header__logo"
-              src=""
-              alt="avatar"
-            />
-          </NavLink>
-        </div>
-        <div className="header__nav">
-          <NavLink className={navLinkClassName} to="/users/meals">
-            <h3 className="header__nav__option">Meal Schedule</h3>
-          </NavLink>
-          <NavLink className={navLinkClassName} to="/edit-profile">
-            <h3 className="header__nav__option">Edit Profile</h3>
-          </NavLink>
-        </div>
-      </div>
+          <div className="header__logo">
+              <img className="header__logo-image"
+                    src={yogaIcon}
+                    alt="logo"
+                    />
+          </div>
+          <div className="header__menu">
+            <NavLink className="header__menu-link" to="/users/currentuser">
+              <img className="header__menu-image"
+                  src={profileIcon}
+                  alt="profile icon"
+                  />
+              <p className="header__menu-text">Profile</p>
+            </NavLink>
+          </div>
+
     </header>
   )
 }

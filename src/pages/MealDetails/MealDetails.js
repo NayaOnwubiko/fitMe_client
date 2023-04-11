@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ingredientsIcon from "../../assets/icons/ingredients.svg";
 import preparationIcon from "../../assets/icons/preparation.svg";
+import backIcon from "../../assets/icons/back.svg";
 
 function MealDetails(){
     const { mealId } = useParams();
@@ -32,8 +33,11 @@ function MealDetails(){
         <>
         <Header />
         <section className="detail">
-            <NavLink to="/users/meals">
-                Back to Meal Schedule
+            <NavLink className="detail__link" to="/users/meals">
+                <img className="detail__link-icon"
+                     src={backIcon}
+                     alt="back button"
+                />
             </NavLink>
             <h1>{renderedMeal.name}</h1>
                 <img className="detail__image"

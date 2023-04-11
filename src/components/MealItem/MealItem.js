@@ -1,7 +1,6 @@
 import "./MealItem.scss";
 import { Link } from "react-router-dom";
 
-
 function MealItem({ mealItem }) {
 
     return (

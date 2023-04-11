@@ -1,7 +1,7 @@
 import "./SignUp.scss";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import signup from "../../assets/icons/signup.svg";
+import signup from "../../assets/logo/signup.png";
 
 function SignUp(){
     const navigate = useNavigate();
@@ -38,7 +38,6 @@ function SignUp(){
                     <img className="signup__hero-image"
                          src={signup}
                         alt="sign up" />
-                    <h2>HOW DOES THIS WORK?</h2>
                         <h3>FILL IN THE FORM</h3>
                             <p>Based on your fitness level & meal preferences, we will select the optimal training & nutrition program for you.</p>
                 </div>

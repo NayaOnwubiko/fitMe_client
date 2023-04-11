@@ -20,6 +20,14 @@
         border-radius: 0.5rem;
     }
 
+    &__link {
+        text-decoration: none;
+
+        &-icon {
+            width: 2rem;
+        }
+    }
+
     &__caption {
         width: 100%;
         display: inline-flex;

@@ -5,7 +5,6 @@ import axios from "axios";
 import avatar from "../../assets/icons/avatar.svg";
 import exerciseIcon from "../../assets/icons/treadmill.svg";
 import foodIcon from "../../assets/icons/bowl.svg";
-import settingsIcon from "../../assets/icons/settings.svg";
 import powerIcon from "../../assets/icons/power.svg";
 
 function UserProfile() {
@@ -66,13 +65,6 @@ function UserProfile() {
                     <p className="profile__header-program">Program: {user.difficulty}</p>
                 </div>
                 <div className="profile__header-edit">
-                    <Link className="profile__header-link" to="/edit-profile">
-                        <img className="profile__header-link-icon"
-                        src={settingsIcon}
-                        alt="settings icon"
-                        />
-                    </Link>
-                    <p className="profile__header-text">Edit Profile</p>
                      <img onClick={handleLogout}
                         className="profile__header-icon"
                         src={powerIcon}
@@ -84,25 +76,23 @@ function UserProfile() {
             <div className="schedule">
                 <div className="exercise">
                     <h3 className="exercise__title">Exercise Routines</h3>
+                    <Link className="exercise__link" to="/users/exercises"> 
                     <img className="exercise__icon"
                         src={exerciseIcon}
                         alt="exercise icon"
                     />
+                    </Link> 
                 </div>
-                <div className="exercise">
-                    <h3 className="exercise__title">Meal Plan</h3>
-                    <Link className="exercise__link" to="/users/meals">
-                    <img className="exercise__icon"
+                <div className="meal">
+                    <h3 className="meal__title">Meal Plan</h3>
+                    <Link className="meal__link" to="/users/meals">
+                    <img className="meal__icon"
                         src={foodIcon}
                         alt="food icon"
                     />
                     </Link>
                 </div>
             </div>
-            {/* <h1>User Profile</h1>
-            <p>Welcome to the site: {user.name} </p>
-            <Link to="/users/meals">Meal Schedule</Link>
-            <button onClick={handleLogout}>Logout</button> */}
         </section>
     )
 }

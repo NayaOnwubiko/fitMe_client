@@ -93,6 +93,34 @@
     padding: 1rem;
 
     &__icon {
+        width: 100%;
+    }
+
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        padding: 1rem;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.meal {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    border-bottom: 0.025rem solid $cloud;
+    padding: 1rem;
+
+    &__icon {
         width: 65%;
     }
 
